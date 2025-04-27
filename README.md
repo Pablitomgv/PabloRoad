@@ -5,3 +5,4 @@ https://roadmap.sh/projects/single-page-cv
 https://roadmap.sh/projects/single-page-cv/solutions?u=680b5bc9734e1042d0951805
 
 #Pagina mini web de mi road map 2
+https://roadmap.sh/projects/basic-html-website
