@@ -22,6 +22,8 @@ https://roadmap.sh/projects/datepicker-ui
 #Pagina con formulario de carga con clave
 https://roadmap.sh/projects/accessible-form-ui
 
+#Pagina con control de grilla y ubicacion de imagenes en la misma grilla
+https://roadmap.sh/projects/image-grid
 
 
 
