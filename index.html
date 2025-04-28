@@ -3,46 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Córdoba, Argentina - Galería de Imágenes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tooltips de Navegación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        .nav-container {
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .nav-link {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        /* Estilos del tooltip */
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            width: max-content;
+            max-width: 200px;
+            text-align: center;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Flecha del tooltip */
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #3498db transparent transparent transparent;
+        }
+
+        /* Mostrar tooltip al hacer hover */
+        .nav-item:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Efectos adicionales para cada elemento */
+        .nav-item:nth-child(1) .tooltip {
+            background-color: #e74c3c;
+        }
+        .nav-item:nth-child(1) .tooltip::after {
+            border-color: #e74c3c transparent transparent transparent;
+        }
+
+        .nav-item:nth-child(2) .tooltip {
+            background-color: #2ecc71;
+        }
+        .nav-item:nth-child(2) .tooltip::after {
+            border-color: #2ecc71 transparent transparent transparent;
+        }
+
+        .nav-item:nth-child(4) .tooltip {
+            background-color: #9b59b6;
+        }
+        .nav-item:nth-child(4) .tooltip::after {
+            border-color: #9b59b6 transparent transparent transparent;
+        }
+
+        .nav-item:nth-child(5) .tooltip {
+            background-color: #f39c12;
+        }
+        .nav-item:nth-child(5) .tooltip::after {
+            border-color: #f39c12 transparent transparent transparent;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Córdoba, Argentina</h1>
-        <p>Conocida como "La Docta" por su histórica universidad y su rica cultura</p>
-    </header>
-    
-    <main>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="img/cordoba-1.jpg" alt="Vista panorámica de Córdoba">
-                <p>Vista panorámica de la ciudad</p>
-            </div>
-            <div class="grid-item">
-                <img src="img/cordoba-2.jpg" alt="Iglesia de Córdoba">
-                <p>Iglesia de la Compañía de Jesús</p>
-            </div>
-            <div class="grid-item">
-                <img src="img/cordoba-3.jpg" alt="Sierras de Córdoba">
-                <p>Las sierras cordobesas</p>
-            </div>
-            <div class="grid-item">
-                <img src="img/cordoba-4.jpg" alt="Plaza San Martín">
-                <p>Plaza San Martín en el centro</p>
-            </div>
-            <div class="grid-item">
-                <img src="img/cordoba-5.jpg" alt="Paseo del Buen Pastor">
-                <p>Paseo del Buen Pastor</p>
-            </div>
-            <div class="grid-item">
-                <img src="img/cordoba-6.jpg" alt="Nueva Córdoba">
-                <p>Barrio de Nueva Córdoba</p>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <p>© 2023 Galería de Córdoba - Proyecto de práctica CSS Grid</p>
-    </footer>
+    <nav class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Inicio</a>
+                <span class="tooltip">Página principal del sitio</span>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Productos</a>
+                <span class="tooltip">Explora nuestros productos</span>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Servicios</a>
+                <span class="tooltip">Conoce nuestros servicios profesionales</span>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+                <span class="tooltip">Artículos y noticias recientes</span>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contacto</a>
+                <span class="tooltip">Formas de contactarnos</span>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
