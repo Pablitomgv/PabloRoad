@@ -1,123 +1,90 @@
-/* Estilos base */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
-    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Contenedor principal */
-.changelog-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
+header {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contenedor Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+/* Items Grid */
+.grid-item {
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Título */
-.changelog-title {
-    color: #2c3e50;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+.grid-item:hover {
+    transform: translateY(-5px);
 }
 
-/* Línea de tiempo */
-.changelog-timeline {
-    position: relative;
-    padding-left: 30px;
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
-/* Línea vertical */
-.changelog-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    width: 2px;
-    background: #e0e0e0;
-}
-
-/* Versión */
-.version {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-/* Punto en la línea de tiempo */
-.version::before {
-    content: '';
-    position: absolute;
-    left: -34px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #3498db;
-    border: 3px solid white;
-    box-shadow: 0 0 0 2px #3498db;
-    z-index: 1;
-}
-
-/* Encabezado de versión */
-.version-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.version-number {
+.grid-item p {
+    padding: 15px;
+    text-align: center;
     font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.1em;
 }
 
-.version-date {
-    color: #7f8c8d;
-    font-size: 0.9em;
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Lista de cambios */
-.changes-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
-.change {
-    padding: 8px 15px;
-    margin-bottom: 8px;
-    background: #f9f9f9;
-    border-left: 3px solid #3498db;
-    border-radius: 0 4px 4px 0;
-}
-
-/* Tipos de cambios */
-.change.added {
-    border-left-color: #2ecc71;
-}
-
-.change.improved {
-    border-left-color: #f39c12;
-}
-
-.change.fixed {
-    border-left-color: #e74c3c;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .version-header {
-        flex-direction: column;
-        align-items: flex-start;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
     }
     
-    .version-date {
-        margin-top: 5px;
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 }

@@ -3,242 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonios de Clientes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Estilos CSS irían aquí */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            padding: 40px 20px;
-        }
-        
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .user-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 3px solid #6c63ff;
-        }
-        
-        .user-name {
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        
-        .user-role {
-            font-size: 14px;
-            color: #777;
-        }
-        
-        .testimonial-text {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .stars {
-            color: #ffc107;
-            margin-bottom: 15px;
-        }
-        
-        .card-1 {
-            border-top: 5px solid #6c63ff;
-        }
-        
-        .card-2 {
-            border-top: 5px solid #ff6b6b;
-        }
-        
-        .card-3 {
-            border-top: 5px solid #4ecdc4;
-        }
-        
-        .card-4 {
-            border-top: 5px solid #ffb347;
-        }
-        
-        .card-5 {
-            border-top: 5px solid #7e57c2;
-        }
-        
-        .encouragement {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 14px;
-            color: #6c63ff;
-            margin-top: 15px;
-            border-left: 3px solid #6c63ff;
-        }
-        
-        @media (max-width: 768px) {
-            .testimonials-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Córdoba, Argentina - Galería de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="testimonials-container">
-        <!-- Tarjeta 1 -->
-        <div class="testimonial-card card-1">
-            <div class="user-info">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Usuario 1" class="user-img">
-                <div>
-                    <h3 class="user-name">María González</h3>
-                    <p class="user-role">CEO, TechSolutions</p>
-                </div>
+    <header>
+        <h1>Córdoba, Argentina</h1>
+        <p>Conocida como "La Docta" por su histórica universidad y su rica cultura</p>
+    </header>
+    
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="img/cordoba-1.jpg" alt="Vista panorámica de Córdoba">
+                <p>Vista panorámica de la ciudad</p>
             </div>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="grid-item">
+                <img src="img/cordoba-2.jpg" alt="Iglesia de Córdoba">
+                <p>Iglesia de la Compañía de Jesús</p>
             </div>
-            <p class="testimonial-text">
-                "Increíble servicio al cliente y productos de alta calidad. Nuestra empresa ha crecido un 40% desde que comenzamos a trabajar con ellos. ¡Altamente recomendados!"
-            </p>
-            <div class="encouragement">
-                <i class="fas fa-heart"></i> ¡Sigue así! Tu dedicación inspira a otros.
+            <div class="grid-item">
+                <img src="img/cordoba-3.jpg" alt="Sierras de Córdoba">
+                <p>Las sierras cordobesas</p>
             </div>
-        </div>
-        
-        <!-- Tarjeta 2 -->
-        <div class="testimonial-card card-2">
-            <div class="user-info">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Usuario 2" class="user-img">
-                <div>
-                    <h3 class="user-name">Carlos Mendoza</h3>
-                    <p class="user-role">Diseñador UX/UI</p>
-                </div>
+            <div class="grid-item">
+                <img src="img/cordoba-4.jpg" alt="Plaza San Martín">
+                <p>Plaza San Martín en el centro</p>
             </div>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div class="grid-item">
+                <img src="img/cordoba-5.jpg" alt="Paseo del Buen Pastor">
+                <p>Paseo del Buen Pastor</p>
             </div>
-            <p class="testimonial-text">
-                "Como diseñador, valoro mucho la atención al detalle y la usabilidad. Este equipo superó todas mis expectativas con su plataforma intuitiva y elegante."
-            </p>
-            <div class="encouragement">
-                <i class="fas fa-lightbulb"></i> ¡Tu creatividad marca la diferencia!
+            <div class="grid-item">
+                <img src="img/cordoba-6.jpg" alt="Nueva Córdoba">
+                <p>Barrio de Nueva Córdoba</p>
             </div>
         </div>
-        
-        <!-- Tarjeta 3 -->
-        <div class="testimonial-card card-3">
-            <div class="user-info">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Usuario 3" class="user-img">
-                <div>
-                    <h3 class="user-name">Laura Ramírez</h3>
-                    <p class="user-role">Directora de Marketing</p>
-                </div>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-                "Los resultados han sido excepcionales. En solo tres meses hemos duplicado nuestro tráfico orgánico gracias a su estrategia de SEO y contenido."
-            </p>
-            <div class="encouragement">
-                <i class="fas fa-star"></i> ¡Eres una estrella brillante en tu campo!
-            </div>
-        </div>
-        
-        <!-- Tarjeta 4 -->
-        <div class="testimonial-card card-4">
-            <div class="user-info">
-                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Usuario 4" class="user-img">
-                <div>
-                    <h3 class="user-name">Juan Pérez</h3>
-                    <p class="user-role">Emprendedor</p>
-                </div>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-                "Como startup, necesitábamos soluciones ágiles y económicas. No solo cumplieron con nuestros requisitos, sino que nos guiaron en cada paso del proceso."
-            </p>
-            <div class="encouragement">
-                <i class="fas fa-rocket"></i> ¡Tu trabajo está llevando a otros al éxito!
-            </div>
-        </div>
-        
-        <!-- Tarjeta 5 -->
-        <div class="testimonial-card card-5">
-            <div class="user-info">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Usuario 5" class="user-img">
-                <div>
-                    <h3 class="user-name">Ana Torres</h3>
-                    <p class="user-role">Directora de RRHH</p>
-                </div>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-                "La plataforma de capacitación que implementaron ha transformado completamente nuestro programa de desarrollo de talento. Los empleados están más comprometidos que nunca."
-            </p>
-            <div class="encouragement">
-                <i class="fas fa-hands-helping"></i> ¡Estás haciendo un impacto real en las personas!
-            </div>
-        </div>
-    </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 Galería de Córdoba - Proyecto de práctica CSS Grid</p>
+    </footer>
 </body>
 </html>
