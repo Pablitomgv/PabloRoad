@@ -10,3 +10,7 @@ https://roadmap.sh/projects/single-page-cv/solutions?u=680b5bc9734e1042d0951805
 #Pagina de mi portafolio personal
 https://roadmap.sh/projects/portfolio-website
 
+#Pagina de un changelog
+https://roadmap.sh/projects/changelog-component
+
+
